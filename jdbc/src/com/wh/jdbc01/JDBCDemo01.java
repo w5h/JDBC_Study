@@ -28,7 +28,7 @@ public class JDBCDemo01 {
 			
 			String url="jdbc:mysql://localhost:3306/web01?serverTimezone=UTC&useSSL=false";
 			String user="root";
-			String password="wu6791245HAO";
+			String password="wu5HAO";
 	        con =DriverManager.getConnection(url, user, password);
 	  	    stmt = con.createStatement();
 			rs=stmt.executeQuery("select * from user");
@@ -71,7 +71,7 @@ public static boolean selectByUsernamePassword(String username,String password) 
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			String url="jdbc:mysql://localhost:3306/web01?serverTimezone=UTC&useSSL=false";
-	        con =DriverManager.getConnection(url, "root", "wu6791245HAO");
+	        con =DriverManager.getConnection(url, "root", "wu5HAO");
 	  	    stmt = con.createStatement();
 	  	    String sql="select * from user where username='"+username+"' and password='"+password+"'";
 	  	    rs=stmt.executeQuery(sql);
@@ -96,7 +96,7 @@ public static boolean selectByUsernamePassword2(String username,String password)
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			String url="jdbc:mysql://localhost:3306/web01?serverTimezone=UTC&useSSL=false";
-	        con =DriverManager.getConnection(url, "root", "wu6791245HAO");
+	        con =DriverManager.getConnection(url, "root", "wu5HAO");
 	        String sql="select * from where username=? and password=?";
 	  	    PreparedStatement pstmt=con.prepareStatement(sql);
 	  	    pstmt.setString(1, username);
